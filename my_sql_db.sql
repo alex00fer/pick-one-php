@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS `pickone_php_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE `pickone_php_db`;
+
+CREATE TABLE IF NOT EXISTS responses (
+       id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+       session_id VARCHAR(40) NOT NULL,
+       selected_img VARCHAR(250) NOT NULL,
+       rejected_img VARCHAR(250) NOT NULL,
+       reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
